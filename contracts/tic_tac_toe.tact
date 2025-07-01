@@ -47,6 +47,10 @@ message(0x03) GetGameState {
     queryId: Int as uint64;
 }
 
+message(0x04) ForfeitGame {
+    gameId: Int as uint32;
+}
+
 // response messages
 message(0x11) GameStateResponse {
     queryId: Int as uint64;
@@ -59,10 +63,6 @@ message(0x11) GameStateResponse {
     winner: Address?;
     xBoard: Int as uint16;
     oBoard: Int as uint16;
-}
-
-message(0x04) ForfeitGame {
-    gameId: Int as uint32;
 }
 
 message(0x12) GameCreated {
